@@ -1,0 +1,13 @@
+{
+  "name": "com.immgames.publisher",
+  "version": "0.0.1",
+  "displayName": "IG Publisher",
+  "description": "Package for delivering WebGL games to our server for further testing",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "author": {
+    "name": "ImmortalGames",
+    "email": "vlad.kalinovskiy.2013@mail.ru",
+    "url": "https://immgames.ru"
+  }
+}
