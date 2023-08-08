@@ -77,3 +77,7 @@ src/Publisher/Assets/com.immgames.ui/
 src/Publisher/Assets/com.immgames.ui.meta
 src/Publisher/Assets/TestServer/
 src/Publisher/Assets/TestServer.meta
+src/Publisher/Assets/Unity.VisualScripting.Generated/
+src/Publisher/Assets/Unity.VisualScripting.Generated.meta
+src/Publisher/Assets/UI Toolkit/
+src/Publisher/Assets/UI Toolkit.meta
