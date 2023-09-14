@@ -184,9 +184,10 @@ namespace ImmGames.Publisher.Editor
         public bool RunAfterUpload;
         public string ProductName;
         public string ServerUrl => serverURL;
+        public static string ProjectKey => $"{PlayerSettings.productName}.{settingsKey}";
         public static PublisherSettings GetSettings()
         {
-            var json = EditorPrefs.GetString(settingsKey, "");
+            var json = EditorPrefs.GetString(ProjectKey, "");
 
             PublisherSettings settings;
 
@@ -218,13 +219,13 @@ namespace ImmGames.Publisher.Editor
         public void Save()
         {
             EditorPrefs.SetString(
-                settingsKey,
+                ProjectKey,
                 JsonUtility.ToJson(this)
                 );
         }
         public static void Clear()
         {
-            EditorPrefs.DeleteKey(settingsKey);
+            EditorPrefs.DeleteKey(ProjectKey);
         }
     }
 }
