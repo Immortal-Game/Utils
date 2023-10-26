@@ -24,10 +24,10 @@ namespace ImmGames.Publisher.Editor.Utils
             Debug.Log(shell.RunAndGetStdout("git", "remote", "add", "origin", remoteUrl));
         }
 
-        public void PullRebase(string branch = "master")
+        public void PullRebaseOverwriteWithLocal(string branch = "master")
         {
             var shell = new Shell(_folder);
-            Debug.Log(shell.RunAndGetStdout("git", "pull", "origin", branch, "--rebase"));
+            Debug.Log(shell.RunAndGetStdout("git", "pull", "origin", branch, "--rebase", "-X", "ours"));
         }
         
         public void AddAll()

@@ -10,9 +10,10 @@ namespace ImmGames.Publisher.Editor.Uploaders
             var git = new Git(pathToFolder);
             git.Init();
             git.SetOriginRemote(settings.TargetRepo);
-            git.PullRebase();
+            git.PullRebaseOverwriteWithLocal();
             git.AddAll();
             git.Commit("Publishing");
+            git.PullRebaseOverwriteWithLocal();
             git.PushOrigin();
             if (settings.RunAfterUpload) 
                 Application.OpenURL(settings.TargetRepo);
